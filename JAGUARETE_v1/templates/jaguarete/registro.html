@@ -1,0 +1,46 @@
+{% extends "jaguarete/layout.html" %} {% block body %} {% load static %}
+
+<div id="cajaForm">
+  <h2>Formulario de registro</h2>
+
+  <form action="" target="_blank" method="get">
+    <label for="usuario"> Usuario: </label>
+    <input
+      type="text"
+      name="usuario"
+      placeholder="Ingrese nombre de usuario..."
+      size="59"
+    />
+    <br />
+    <br />
+    <label for="email"> Email: </label>
+    <input
+      type="text"
+      name="email"
+      placeholder="Ingrese su correo electronico..."
+      size="59"
+    />
+    <br />
+    <br />
+    <label for="password"> Password: </label>
+    <input
+      type="text"
+      name="password"
+      placeholder="Ingrese su Password..."
+      size="58"
+    />
+    <br />
+    <br />
+    <label for="rep_password" size="60"> Repetir Password: </label>
+    <input
+      type="text"
+      name="rep_password"
+      placeholder="Repetir su Password..."
+      size="58"
+    />
+
+    <input type="submit" value="Enviar" />
+  </form>
+</div>
+
+{% endblock %}

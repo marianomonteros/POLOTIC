@@ -1,0 +1,13 @@
+{% extends "jaguarete/layout.html" %} {% block body %} {% load static %}
+
+<h1>Agregar Tarea:</h1>
+<form action="{% url 'JAGUARETE_V1:agregartarea' %}" method="post">
+  {% csrf_token %}
+  <input type="text" name="tarea" />
+  <input type="submit" name "Guardar">
+</form>
+<div class="acciones">
+  <a href="{% url 'JAGUARETE_V1:producto' %}"> Volver al listado </a>
+</div>
+
+{% endblock %}

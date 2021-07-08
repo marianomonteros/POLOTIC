@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <title>JAGUARETE kAA S.A.</title>
+
+    <link rel="stylesheet" href="{%static 'jaguarete/styles.css'%}" />
+
+    <script
+      src="https://kit.fontawesome.com/ec8e8f40e7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <section class="section_item flex-container color-2">
+      <header>
+        <img id="ilogo" src="{% static 'img/JAGUARETE.jpg' %}" width="400" height="300"/>
+
+        <h1>JAGUARETE kAA S.A.</h1>
+        <div class="containerLogin">
+          <button onclick="location.href= '../JAGUARETE_v1/Login' ">
+            Login
+          </button>
+        </div>
+
+        <div class="containerRegistro">
+          <button onclick="location.href= '../JAGUARETE_v1/registro' ">
+            Registro
+          </button>
+        </div>
+
+        <div class="containerCarrito">
+          <button onclick="location.href= '../JAGUARETE_v1/Carrito' ">
+            Carrito
+          </button>
+        </div>
+      </header>
+    </section>
+    <!-- start nav -->
+    <nav id="menu">
+      <!-- start menu -->
+      <ul>
+        <li><a href="{% url 'JAGUARETE_V1:index' %}"> PRINCIPAL </a></li>
+        <li>
+          <a href="#">Categoria</a>
+          <!-- start menu desplegable -->
+          <ul>
+            <li><a href="#">Categoria 2.1</a></li>
+            <li><a href="#">Categoria 2.2</a></li>
+            <li><a href="#">Categoria 2.3</a></li>
+          </ul>
+          <!-- end menu desplegable -->
+        </li>
+        <li><a href="{% url 'JAGUARETE_V1:acerca_de' %}"> acerca_de </a></li>
+        <li><a href="#">Contacto</a></li>
+
+        <li>
+          <div class="acciones">
+            <a href="{% url 'JAGUARETE_V1:agregartarea' %}"> NUEVO PRODUCTO </a>
+          </div>
+        </li>
+
+        <li>
+          <form action="/action_page.php">
+            <label for="produc_search"></label>
+            <input type="search" id="produc_search" name="produc_search" />
+          </form>
+        </li>
+      </ul>
+      <!-- end menu -->
+    </nav>
+    <!-- end nav -->
+
+    <br />
+    <br />
+
+    {% block body %} {% endblock %}
+
+    <footer>
+      <a href="http://www.twitter.com" target="_blank">
+        <i class="fab fa-twitter" aria-hidden="true"> </i>
+      </a>
+      <a href="http://www.facebook.com" target="_blank">
+        <i class="fab fa-facebook-f" aria-hidden="true"> </i>
+      </a>
+      <a href="http://www.pinteres.com" target="_blank">
+        <i class="fab fa-pinterest" aria-hidden="true"> </i>
+      </a>
+      <a href="http://www.instagram.com" target="_blank">
+        <i class="fab fa-instagram-square" aria-hidden="true"> </i>
+      </a>
+      <a href="http://www.linkedin.com" target="_blank">
+        <i class="fab fa-linkedin" aria-hidden="true"> </i>
+      </a>
+      <br />
+      <p>Derechos reservados @2020</p>
+      <br />
+    </footer>
+  </body>
+</html>

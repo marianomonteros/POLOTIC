@@ -1,0 +1,12 @@
+{% extends "jaguarete/layout.html" %} {% block body %} {% load static %}
+
+<h1>Lista de productos:</h1>
+<ul>
+  {% for una_Tarea in tareas %}
+  <li>{{ una_Tarea }}</li>
+  {% endfor %}
+</ul>
+
+<a href="{% url 'JAGUARETE_V1:agregartarea' %}"> Agregar producto </a>
+
+{% endblock %}
